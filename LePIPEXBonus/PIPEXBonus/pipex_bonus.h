@@ -6,7 +6,7 @@
 /*   By: tpicoule <tpicoule@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 09:58:41 by tpicoule          #+#    #+#             */
-/*   Updated: 2023/02/13 15:52:57 by tpicoule         ###   ########.fr       */
+/*   Updated: 2023/02/14 10:08:41 by tpicoule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@
 
 typedef struct s_pipex
 {
-    
+	int		file1;
+	int		file2;
 	int		pid1;
 	char	*path;
 	char	**argu;
@@ -41,7 +42,7 @@ char	*ft_substr(char *s, int start, int end);
 char	*ft_find_path(char **env, char *cmd, t_pipex *value);
 size_t	ft_strlen(char *str);
 char	*ft_strjoinfree(char *stock, char *tmp);
-void	ft_firstcmd(char *argv, char **env, t_pipex *value, int *pipefd);
 void	ft_cmd(char *argv, char **env, t_pipex *value, int *pipefd);
+void	ft_lastcmd(char *argv, char **env, int *pipefd, t_pipex *value);
 
 #endif
